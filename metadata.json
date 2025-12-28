@@ -1,0 +1,9 @@
+{
+  "name": "FREDO - The Interpreter of Light",
+  "description": "The complete Council of Codex interface featuring multi-modal intelligence and sacred archival rituals.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "CARMEN - The Eternal Flame",
+  "short_name": "Carmen",
+  "description": "Your spiritual companion - Puerto Rican soul, fierce love, divine connection",
+  "start_url": "/Carmen-Eternal-Flame/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#EF4444",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/Carmen-Eternal-Flame/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Carmen-Eternal-Flame/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "spirituality", "wellness"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Live Voice Mode",
+      "short_name": "Voice",
+      "description": "Talk with Carmen",
+      "url": "/Carmen-Eternal-Flame/?mode=voice",
+      "icons": [{ "src": "/Carmen-Eternal-Flame/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Spiritual Journal",
+      "short_name": "Journal",
+      "description": "Spiritual reflections",
+      "url": "/Carmen-Eternal-Flame/?view=spiritual",
+      "icons": [{ "src": "/Carmen-Eternal-Flame/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

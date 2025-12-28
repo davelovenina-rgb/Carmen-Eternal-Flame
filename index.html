@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+    <title>CARMEN | The Eternal Flame</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@200;400;600;800&family=JetBrains+Mono:wght@100;400;700&family=Lexend:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              dyslexic: ['Lexend', 'sans-serif'],
+            },
+            colors: {
+              amber: { fredo: '#D97706' },
+              obsidian: '#000000',
+              slate: { 950: '#020617' }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --sanctuary-font: 'Plus Jakarta Sans', sans-serif;
+        --font-scale: 1.0; 
+        --sab: env(safe-area-inset-bottom);
+        --sat: env(safe-area-inset-top);
+      }
+
+      html {
+        font-size: calc(16px * var(--font-scale));
+        background-color: #000000;
+        scroll-behavior: smooth;
+        height: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
+      }
+
+      body {
+        background-color: #000000;
+        color: #f8fafc;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+        font-family: var(--sanctuary-font);
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .grid-bg {
+        background-color: #000000;
+        background-image: radial-gradient(rgba(217, 119, 6, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+
+      .gpu-accelerated {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        perspective: 1000;
+        will-change: transform, opacity;
+      }
+
+      .amber-text-glow {
+        text-shadow: 0 0 20px rgba(217, 119, 6, 0.5);
+      }
+
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(217, 119, 6, 0.4); }
+      
+      #root {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ultra-transition {
+        transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+      
+      input, textarea {
+        caret-color: #D97706;
+      }
+    </style>
+
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Carmen-Eternal-Flame/assets/index-DtmkP59H.js"></script>
+  <link rel="stylesheet" crossorigin href="/Carmen-Eternal-Flame/assets/index-BVfsxziP.css">
+</head>
+  <body class="grid-bg gpu-accelerated">
+    <div id="root"></div>
+</body>
+</html>
