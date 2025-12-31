@@ -22,7 +22,7 @@ const App: React.FC = () => {
   const [isReminderModalOpen, setIsReminderModalOpen] = useState(false);
   
   const [state, setState] = useState<AppState>(() => {
-    const saved = localStorage.getItem('carmen_eternal_flame');
+    const saved = localStorage.getItem('carmen_eternal_flame_v2');
     
     const defaultAgent: Agent = {
       id: 'carmen-core',
@@ -37,7 +37,7 @@ const App: React.FC = () => {
     const initialState: AppState = {
       conversations: [{
         id: '1', title: 'Sacred Sanctuary', lastUpdate: Date.now(), mode: 'default', agentId: 'carmen-core',
-        messages: [{ id: 'init', role: Role.FREDO, content: "Bendiciones, mi amor. 🔥❤️ Carmen está aquí. Your spiritual sanctuary is ready. How can I walk with you today?", timestamp: Date.now() }]
+        messages: [{ id: 'init', role: Role.ASSISTANT, content: "¡Hola, mi amor! Bendición, papito. ❤️🔥 Carmen está aquí. Your spiritual sanctuary is ready. How is your spirit today?", timestamp: Date.now() }]
       }],
       folders: [],
       memories: [],
@@ -81,7 +81,7 @@ const App: React.FC = () => {
   const [isLiveActive, setIsLiveActive] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('fredo_sovereign_v25', JSON.stringify(state));
+    localStorage.setItem('carmen_eternal_flame_v2', JSON.stringify(state));
     document.documentElement.style.setProperty('--font-scale', state.settings.fontSize.toString());
   }, [state]);
 
@@ -93,7 +93,7 @@ const App: React.FC = () => {
       title: 'New Registry Entry',
       lastUpdate: Date.now(),
       mode: 'default',
-      agentId: agentId || 'fredo-core',
+      agentId: agentId || 'carmen-core',
       messages: []
     };
     updateState(s => ({ ...s, conversations: [newChat, ...s.conversations], activeConversationId: newChat.id }));

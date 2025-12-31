@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Carmen Eternal Flame</string>
+    <string name="title_activity_main">Carmen Eternal Flame</string>
+    <string name="package_name">com.rodriguez.carmen</string>
+    <string name="custom_url_scheme">com.rodriguez.carmen</string>
+</resources>

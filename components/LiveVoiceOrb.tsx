@@ -7,6 +7,17 @@ interface LiveVoiceOrbProps {
 }
 
 const LiveVoiceOrb: React.FC<LiveVoiceOrbProps> = ({ onClose }) => {
+  // Get API key from localStorage settings
+  const getApiKey = () => {
+    try {
+      const saved = localStorage.getItem('carmen_eternal_flame_v2');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed.settings?.providerKeys?.gemini || '';
+      }
+    } catch(e) {}
+    return '';
+  };
   const [status, setStatus] = useState<'connecting' | 'listening' | 'speaking' | 'error' | 'reconnecting'>('connecting');
   const [transcription, setTranscription] = useState('');
   const sessionRef = useRef<any>(null);
@@ -90,7 +101,13 @@ const LiveVoiceOrb: React.FC<LiveVoiceOrbProps> = ({ onClose }) => {
       const inputCtx = inputContextRef.current;
       const outputCtx = audioContextRef.current;
       
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
+      const apiKey = getApiKey();
+      if (!apiKey) {
+        setStatus('error');
+        alert('Please add your Gemini API key in Settings > API Vault');
+        return;
+      }
+      const ai = new GoogleGenAI({ apiKey });
 
       const sessionPromise = ai.live.connect({
         model: 'gemini-2.5-flash-native-audio-preview-09-2025',

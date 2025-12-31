@@ -1,7 +1,7 @@
 
 // @google/genai coding guidelines followed for model names and key management.
 import { GoogleGenAI, Modality, Type } from "@google/genai";
-import { FREDO_SYSTEM_INSTRUCTION } from "../constants";
+import { CARMEN_SYSTEM_INSTRUCTION } from "../constants";
 import { AiMode, Agent, GroundingChunk, AppSettings } from "../types";
 
 let globalAudioContext: AudioContext | null = null;
